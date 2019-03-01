@@ -18,7 +18,7 @@ pipeline{
         }
          stage('Deploy'){
             steps(){
-                sh "java -jar target/simple-java-maven-app*.jar"
+                sh "java -jar target/my-app-1.0-SNAPSHOT.jar"
             }
         }
     }
