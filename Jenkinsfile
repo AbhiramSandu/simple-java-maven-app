@@ -27,7 +27,7 @@ pipeline {
   }
   stage('publish') {
    steps {
-    sh 'curl -x PUT -u admin:Raju@12345 -T target/my-app-1.0-SNAPSHOT.jar "http://34.220.183.178:8081/artifactory/libs-snapshot/my-app-1.0-SNAPSHOT.jar"'
+    sh 'curl -X PUT -u admin:APB4oSbMxjG67dX7gZdt2oPHD4m -T target/my-app-1.0-SNAPSHOT.jar "http://34.220.183.178:8081/artifactory/libs-snapshot/my-app-1.0-SNAPSHOT.jar"'
    }
   }
  }
