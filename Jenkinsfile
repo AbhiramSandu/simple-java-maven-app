@@ -16,5 +16,10 @@ pipeline{
                 sh "mvn test"
             }
         }
+         stage('Deploy'){
+            steps(){
+                sh "java -jar target/simple-java-maven-app*.jar"
+            }
+        }
     }
 }
