@@ -18,7 +18,7 @@ pipeline{
                 always{
                     junit 'target/surefire-reports/*.xml'
             }
-        }
+            }}
          stage('Deploy'){
             steps(){
                 sh "java -jar target/my-app-1.0-SNAPSHOT.jar"
