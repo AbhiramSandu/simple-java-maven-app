@@ -10,7 +10,7 @@ pipeline {
     sh "mvn -B -DskipTests clean package"
    }
   }
-  stage('UnitTest') {
+  /*stage('UnitTest') {
    steps {
     sh "mvn test"
    }
@@ -19,16 +19,16 @@ pipeline {
      junit 'target/surefire-reports/*.xml'
     }
    }
-  }
+  }*/
   stage('Deploy') {
    steps {
     sh "java -jar target/my-app-1.0-SNAPSHOT.jar"
    }
   }
-  stage('publish') {
+  /*stage('publish') {
    steps {
     sh 'curl -X PUT -u admin:APB4oSbMxjG67dX7gZdt2oPHD4m -T target/my-app-1.0-SNAPSHOT.jar "http://34.220.183.178:8081/artifactory/libs-snapshot/my-app-1.0-SNAPSHOT.jar"'
    }
-  }
+  }*/
  }
 }
